@@ -1,0 +1,8 @@
+<h1 ng-hide="!me">Welcome {{ me.name }}:</h1>
+
+<ul class="friendlist" ng-hide="!friends">
+	<li ng-repeat="friend in friends">
+		<img ng-src="{{ friend.picture.data.url }}" width="28" height="28">
+		{{ friend.name }}
+	</li>
+</ul>

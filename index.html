@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>App</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style_login.css">
+</head>
+<body ng-cloak>
+
+  <div ng-controller="mainController" ng-show="auth.resolved">
+    <div class="container">
+      
+      <ng-view></ng-view>
+	  
+	  
+	  <div class="message warning">
+		<div class="inset">
+			<div class="login-head">
+				<h1>Welcome</h1>
+				 <div class="alert-close"> </div> 			
+			</div>
+				<form>
+					
+					<div class="clear"> </div>
+					<div class="submit">
+					
+						<input class="fblogin" type="submit" ng-show="auth.user" ng-click="auth.logout()" value="Logout" >
+						
+								  <div class="clear">  </div>	
+					</div>
+						
+				</form>
+				</div>					
+			</div>
+			</div>
+			<div class="clear"> </div>
+	  
+	  
+    </div>
+  </div>
+
+  <!-- Dependencies -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+  <!-- Angular Modules -->
+  <script src="js/modules/facebook/module.js"></script>
+  <script src="js/modules/facebook/services/facebookService.js"></script>
+  <script src="js/modules/facebook/services.js"></script>
+  <script src="js/modules/app/controllers/mainController.js"></script>
+  <script src="js/modules/app/controllers/homeController.js"></script>
+  <script src="js/modules/app/controllers/loginController.js"></script>
+  <script src="js/modules/app/controllers.js"></script>
+  <script src="js/modules/app/services/fbLoginService.js"></script>
+  <script src="js/modules/app/services.js"></script>
+  <script src="js/modules/app/routes.js"></script>
+  <script src="js/modules/app/module.js"></script>
+  <script src="js/modules/app/settings.js"></script>
+
+</body>
+</html> 
